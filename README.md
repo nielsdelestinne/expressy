@@ -9,6 +9,21 @@ Sample project using NodeJS, Express & TypeScript.
     - This command will first compile all TypeScript `.ts` files to JavaScript `.js` files.
     - Then, it will start up the Express backend by executing `node main.js`.
 
+## Sample calls
+1. Get all users: HTTP GET `http://localhost:3000/users/`
+2. Get User By Id (1): HTTP GET `http://localhost:3000/users/1` 
+3. Create User: HTTP POST `http://localhost:3000/users/`
+    - Payload as JSON: 
+        ```json
+       {
+            "name": "Roxanne",
+            "nickname": "Roxy",
+            "email": "roxanne@thepoliceband.com"
+        }
+       ``` 
+   
+   
+
 ## Useful resources
 - TypeScript, Node, Express, Mongoose Starter template: https://github.com/microsoft/TypeScript-Node-Starter
 - Express route handlers using Async / Await (when communicating to the DB, to external services,...): https://zellwk.com/blog/async-await-express/ (includes how to deal with errors when working async.)
