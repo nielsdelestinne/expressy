@@ -10,7 +10,7 @@ export class Application {
     launchOn(port: number) {
         this.expressApp.use(bodyParser.json());
         this.expressApp.use(bodyParser.urlencoded({ extended: true }));
-        this.expressApp.listen(port, () => console.log(`Server started and listening on port ${port}!`));
+        this.expressApp.listen(port, () => console.log(`==> Server started and listening on port ${port}!`));
         this.enableRouting();
     }
 
