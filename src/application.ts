@@ -1,6 +1,6 @@
 import bodyParser = require('express');
 
-import {Controller} from "./controllers/controller";
+import {Controller} from './controllers/controller';
 import {Express} from 'express';
 
 export class Application {

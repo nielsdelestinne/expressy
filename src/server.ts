@@ -1,4 +1,4 @@
-import { Application} from "./application";
+import { Application} from './application';
 
 export class Server {
     private static readonly PORT = 3000;
