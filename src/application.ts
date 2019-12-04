@@ -1,13 +1,9 @@
-import express = require('express');
+import {Controller} from "./controllers/controller";
 import {Express} from 'express';
 
 export class Application {
 
-    private expressApp: Express;
-
-    constructor() {
-        this.expressApp = express();
-    }
+    constructor(private controllers: Controller[], private expressApp: Express) {}
 
     launchOn(port: number) {
         this.expressApp.listen(port, () => console.log(`Server started and listening on port ${port}!`));
@@ -15,6 +11,9 @@ export class Application {
     }
 
     private enableRouting() {
-        this.expressApp.get('/', (req, res) => res.send('Hello World!'));
+        this.expressApp.get('/', (req, res) => res.send('Up and running!'));
+        this.controllers
+            .forEach(controller => controller.enableRouting(this.expressApp))
+
     }
 }
